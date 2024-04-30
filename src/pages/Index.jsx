@@ -44,6 +44,7 @@ const Index = () => {
     if (data.access_token) {
       localStorage.setItem("supabase.auth.token", data.access_token);
       setIsLoggedIn(true);
+      window.location.href = "/notes";
       toast({
         title: "Login Successful",
         description: "You've successfully logged in.",
