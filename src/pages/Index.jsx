@@ -77,15 +77,15 @@ const Index = () => {
 
   return (
     <ChakraProvider theme={theme}>
-      <Box minH="100vh" display="flex" alignItems="center" justifyContent="center">
+      <Box minH="100vh" display="flex" alignItems="center" justifyContent="center" bgGradient="linear(to-r, teal.300, blue.500)">
         {!isLoggedIn ? (
           <VStack spacing={4}>
             <Text fontSize="2xl" fontWeight="bold">
               Login to your account
             </Text>
-            <Input placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-            <Input placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            <Button colorScheme="blue" onClick={handleLogin}>
+            <Input placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} boxShadow="sm" />
+            <Input placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} boxShadow="sm" />
+            <Button colorScheme="pink" onClick={handleLogin} boxShadow="md">
               Login
             </Button>
           </VStack>
